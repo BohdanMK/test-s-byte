@@ -1,0 +1,38 @@
+.burger {
+
+    @include breakpoint($mobile) {
+        padding-right: 2rem;
+    }
+    & span {
+        display: block;
+        width: 100%;
+        width: 2rem;
+        height: .17rem;
+
+        background-color: $black;
+
+        position: relative;
+        &::after,
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            width: 2rem;
+            height: .17rem;
+
+            background-color: $black;
+
+            position: absolute;
+            left: 0;
+            z-index: 2;
+        }
+
+        &::before {
+            top: -.5rem
+        }
+
+        &::after {
+            top: .5rem
+        }
+    }
+}

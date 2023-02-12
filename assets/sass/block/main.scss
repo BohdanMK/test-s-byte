@@ -1,0 +1,8 @@
+.main {
+    display: flex;
+    height: 100%;
+
+    @include breakpoint($mobile) {
+        display: block;
+    }
+}

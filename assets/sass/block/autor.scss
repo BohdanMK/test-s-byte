@@ -1,0 +1,95 @@
+.autor {
+    width: 34%;
+    background: url(../images/autor.jpg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+    position: relative;
+
+
+
+    @include breakpoint($mobile) {
+        width: 100%
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba($color: #24475b, $alpha: .7);
+
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 3;
+
+        padding: 4.3rem 5rem 3rem;
+
+        @include breakpoint($laptop) {
+            padding: 1.3rem 1.5rem 1.5rem 2rem;
+        }
+
+        @include breakpoint($mobile) {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 3rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 18rem;
+
+        font-family: $Font;
+        color: $white;
+        font-size: 2.5rem;
+
+        & span {
+            font-weight: 900;
+        }
+
+        @include breakpoint($laptop) {
+            font-size: 2rem;
+        }
+
+        @include breakpoint($mobile) {
+            margin-bottom: 5rem;
+
+            font-size: 1.5rem;
+        }
+    }
+
+    &__name {
+        margin: 1rem auto;
+
+        font-family: $Font;
+        font-size: 3rem;
+        color: $white;
+        font-weight: 900;
+
+        @include breakpoint($laptop) {
+            font-size: 2rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__position {
+        font-family: $Font;
+        color: $white;
+        opacity: .7;
+        font-weight: .9rem;
+        font-weight: 400;
+    }
+
+}

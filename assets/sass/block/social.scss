@@ -1,0 +1,65 @@
+.social {
+    &__title {
+        margin-bottom: 1rem;
+        font-family: $Font;
+        font-size: 1rem;
+        color: $white;
+        opacity: .7;
+
+        @include breakpoint($mobile) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        column-gap: .3rem;
+
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+
+        justify-content: center;
+        align-items: center;
+
+        background-color: $black;
+        border-radius: .5rem;
+
+        transition: .2s all;
+
+        &:hover {
+            transition: .2s all;
+            transform: scale(1.1);
+        }
+
+        &:nth-child(1) {
+            background-color: #345bb4;
+        }
+
+        &:nth-child(2) {
+            background-color: #e64895;
+        }
+
+        &:nth-child(3) {
+            background-color: #00b4ff;
+        }
+    }
+
+
+    &__text {
+        margin: 3rem auto;
+        font-family: $Font;
+        font-size: .9rem;
+        color: $white;
+        opacity: .7;
+
+        @include breakpoint($mobile) {
+            margin: 1rem auto;
+        }
+    }
+
+}

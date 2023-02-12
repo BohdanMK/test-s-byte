@@ -1,0 +1,80 @@
+.services {
+    width: 45%;
+
+    padding: 4.1rem 5.5rem 3.5rem 3.2rem;
+
+    background: url(../images/services-bg.jpg) no-repeat center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+    position: relative;
+
+    @include breakpoint($mobile) {
+        width: 100%
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba($color: #439aaf, $alpha: .7);
+
+    }
+
+    @include breakpoint($laptop) {
+        padding: 1.3rem 1.5rem 1.5rem 2rem;
+    }
+
+    &__item {
+        position: relative;
+        z-index: 3;
+
+        margin: 2rem auto 2rem;
+
+        & p {
+            font-family: $Font;
+            font-weight: 400;
+            font-size: 1rem;
+            color: $white;
+            opacity: .7;
+            line-height: 1.4;
+            word-spacing: .2rem;
+
+            @include breakpoint($laptop) {
+                font-size: .8rem;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 5rem;
+
+        @include breakpoint($laptop) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+        font-family: $Font;
+        font-weight: 400;
+        font-size: 2.7rem;
+        color: $white;
+
+        @include breakpoint($laptop) {
+            font-size: 1.8rem;
+
+            margin-bottom: 1.4rem;
+        }
+    }
+
+}

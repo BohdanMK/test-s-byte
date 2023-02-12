@@ -1,0 +1,55 @@
+.form {
+    width: 100%;
+    max-width: 55rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 18px;
+    grid-row-gap: 18px;
+
+    @include breakpoint($tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        padding: 1rem;
+
+        background: transparent;
+        border-radius: .7rem;
+        border: 1px solid $white;
+        background: transparent;
+        outline: none;
+
+        font-family: $Font;
+        font-size: .9rem;
+        font-weight: 400;
+        color: $white;
+
+        &::placeholder {
+            font-family: $Font;
+            font-size: .9rem;
+            font-weight: 400;
+            color: $white;
+            opacity: .7;
+        }
+        &--firsth {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &--second {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        &--text {
+            resize: none;
+            height: 10rem;
+            grid-area: 2 / 1 / 5 / 3;
+        }
+    }
+
+    &__btn {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+}
